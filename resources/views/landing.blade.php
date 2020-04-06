@@ -156,8 +156,5 @@
         </div>
     </section>
 
-
-    
-
-
+{{-- next update --}}
 @endsection
