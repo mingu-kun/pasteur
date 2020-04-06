@@ -69,6 +69,12 @@
       @yield('content')
     </div>
 
+    <div class="footer bg-success">
+      <h1>footer</h1>
+      <h1>footer</h1>
+      <h1>footer</h1>
+  </div>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script
