@@ -70,9 +70,13 @@
     </div>
 
     <div class="footer bg-success">
-      <h1>footer</h1>
-      <h1>footer</h1>
-      <h1>footer</h1>
+      <div class="container">
+        <div class="row justify-content-between">
+          <div class="col">1</div>
+          <div class="col">2</div>
+          <div class="col">3</div>
+        </div>
+      </div>
   </div>
 
     <!-- Optional JavaScript -->
