@@ -57,3 +57,23 @@ a {
     width: 100%;
     position: absolute;
 }
+
+.footer {
+    background-color: #06362a;
+}
+
+.bacg {
+    background-color: rgba(234, 234, 234, 0.815);
+}
+
+.bgcontent {
+    background-color: #0a5c488e;
+}
+
+.bgcr {
+    background-color: #0f755c77;
+}
+
+.img-hover-zoom:hover img {
+    transform: scale(1.3);
+}

@@ -9,39 +9,18 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
-
+    <script type="text/javascript">
+      function generateBarCode()
+      {
+          var nric = $('#text').val();
+          var url = 'https://api.qrserver.com/v1/create-qr-code/?data=' + nric + '&amp;size=50x50';
+          $('#barcode').attr('src', url);
+      }
+    </script>
     <title>@yield('title')</title>
   </head>
   <body>
-    {{-- <nav id="topNav" class="navbar fixed-top navbar-toggleable-sm navbar-inverse bg-inverse">
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target=".navbar-collapse">
-          ☰
-      </button>
-      <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link" href="#">Link</a>
-              </li>
-          </ul>
-      </div>
-      <a class="navbar-brand mx-auto" href="#">NavBar</a>
-      <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav ml-auto">
-              <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
-              </li>
-          </ul>
-      </div>
-  </nav> --}}
+
     <nav class="navbar navbar-expand-lg navbar-light bg-transparent ">
       <div class="container">
         <button class="navbar-toggler fixed-top mt-2 ml-2" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -50,17 +29,17 @@
 
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav col-6 offset-2 justify-content-between">
-            <a class="nav-item nav-link text-white font-weight-bold" href="#">Produk</a>
-            <a class="nav-item nav-link text-white font-weight-bold " href="#">Harga</a>
+            <a class="nav-item nav-link text-white font-weight-bold" href="{{'/'}}">Home</a>
+            <a class="nav-item nav-link text-white font-weight-bold " href="{{'/contact'}}">Kontak</a>
           </div>
         </div>
-        <a class="navbar-brand mx-auto" href="#" >
+      <a class="navbar-brand mx-auto" href="{{'/'}}" >
           <img id="img-logo" src="{{asset('image/logo.png')}}" height="110" width="100">
         </a>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav col-6 offset-4 justify-content-between">
-              <a class="nav-item nav-link text-white font-weight-bold" href="#">Produk</a>
-              <a class="nav-item nav-link text-white font-weight-bold " href="#">Harga</a>
+              <a class="nav-item nav-link text-white font-weight-bold" href="{{'/product'}}">Produk</a>
+              <a class="nav-item nav-link text-white font-weight-bold " href="{{'/price'}}">Harga</a>
             </div>
           </div>
       </div>
@@ -69,12 +48,23 @@
       @yield('content')
     </div>
 
-    <div class="footer bg-success">
+
+    {{-- Footers --}}
+    <div class="footer">
       <div class="container">
-        <div class="row justify-content-between">
-          <div class="col">1</div>
-          <div class="col">2</div>
-          <div class="col">3</div>
+        <div class="row justify-content-between pt-3">
+          <div class="col">
+            <p class="text-white">Lokasi & Marketing Gallery <br> Jl. Gunung Batu 203, Pasteur <br>Bandung - Jawa Barat</p>
+            <div class="pt-2 ">
+              <img id="img-logo" src="{{asset('image/gmaps.png')}}" height="50" width="50">
+                  <p class="text-white mt-1">https://g.page/gatewaypasteur?share</p>
+            </div>
+          </div>
+          <div class="col">
+            <a href="#">Fb</a>
+            <a href="#">Ig</a>
+          </div>
+          <div class="col">lokasi Peta</div>
         </div>
       </div>
   </div>

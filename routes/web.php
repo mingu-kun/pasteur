@@ -14,7 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', 'LandingController@landing');
-
+Route::get('/product', 'LandingController@product');
+Route::get('/contact', 'LandingController@contact');
+Route::get('/price', 'LandingController@price');
+Route::get('/registration', 'RegistationController@index')->name('registration');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+

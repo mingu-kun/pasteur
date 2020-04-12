@@ -14,7 +14,7 @@ class RegistationController extends Controller
      */
     public function index()
     {
-        //
+        return view('registration');
     }
 
     /**

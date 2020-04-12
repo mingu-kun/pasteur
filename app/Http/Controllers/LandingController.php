@@ -10,4 +10,17 @@ class LandingController extends Controller
     {
         return view('landing');
     }
+    public function contact()
+    {
+        return view('contact');
+    }
+    public function product()
+    {
+        return view('product');
+    }
+    public function price()
+    {
+        return view('price');
+    }
+
 }
