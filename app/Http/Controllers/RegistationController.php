@@ -35,7 +35,21 @@ class RegistationController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        request()-> validate([
+            'nama' => ['required'],
+            'email' => ['required'],
+            'telp' => ['required'],
+            'alamat' => ['required']
+        ]);
+
+        $registation = new registation;
+        $registation->nama = request('nama');
+        $registation->email = request('email');
+        $registation->telp = request('telp');
+        $registation->alamat = request('alamat');
+        $registation->save();
+
+        return redirect('/registration')->with('success','Terimakasih .. ! registration berhasil di simpan');
     }
 
     /**

@@ -8,6 +8,8 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="dns-prefetch" href="//fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="{{ asset('css/custom.css') }}" rel="stylesheet">
     <script type="text/javascript">
       function generateBarCode()
@@ -17,6 +19,8 @@
           $('#barcode').attr('src', url);
       }
     </script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
     <title>@yield('title')</title>
   </head>
   <body>
@@ -38,8 +42,8 @@
         </a>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav col-6 offset-4 justify-content-between">
-              <a class="nav-item nav-link text-white font-weight-bold" href="{{'/product'}}">Produk</a>
-              <a class="nav-item nav-link text-white font-weight-bold " href="{{'/price'}}">Harga</a>
+              <a class="nav-item nav-link text-white font-weight-bold" href="{{'/product'}}">Apartment</a>
+              <a class="nav-item nav-link text-white font-weight-bold " href="{{'/price'}}">Residence</a>
             </div>
           </div>
       </div>
@@ -53,17 +57,37 @@
     <div class="footer">
       <div class="container">
         <div class="row justify-content-between pt-3">
-          <div class="col">
-            <p class="text-white">Lokasi & Marketing Gallery <br> Jl. Gunung Batu 203, Pasteur <br>Bandung - Jawa Barat</p>
-            <div class="pt-2 ">
-              <img id="img-logo" src="{{asset('image/gmaps.png')}}" height="50" width="50">
-                  <p class="text-white mt-1">https://g.page/gatewaypasteur?share</p>
+          <div class="col-12 text-center">
+            <div class="row mt-2 text-white text-small h6">
+                <div class="col"></div>
+                <div class="col-12">
+                    
+                        {{-- <div class="d-flex justify-content-center mt-2">
+                            <a href="{{'https://telegram.me/adrajayapayment_bot'}}" class=" bg-white rounded-circle">
+                                <i class="fa fa-telegram fa-2x" aria-hidden="true"></i>
+                            </a>
+                            <a href="{{'https://www.facebook.com/adrajaya.rel0ad/'}}" class="mr-4 ml-4 bg-white rounded">
+                                <i class="fa fa-facebook-square fa-2x " aria-hidden="true"></i>
+                            </a>
+                            <a href="{{'https://www.facebook.com/adrajaya.rel0ad/'}}" class=" bg-white rounded">
+                                <i class="fa fa-instagram fa-2x" aria-hidden="true"></i>
+                            </a>
+                            <a href="{{'https://www.facebook.com/adrajaya.rel0ad/'}}" class="mr-4 ml-4 bg-white rounded-circle">
+                                <i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div> --}}
+                        <div class="col">
+                          <p class="text-white">Lokasi & Marketing Gallery <br> Jl. Gunung Batu 203, Pasteur <br>Bandung - Jawa Barat</p>
+                          <div class="pt-2 ">
+                            <img id="img-logo" src="{{asset('image/gmaps.png')}}" height="50" width="50">
+                                <p class="text-white mt-1">https://g.page/gatewaypasteur?share</p>
+                          </div>
+                        </div><br>
+                        <p class="text-white text-small mt-3 " >© Copyright CV. Adrajaya Digital Teknologi Indonesia 2020.</p>                                                                                                                                                                                 
+                </div>
+                <div class="col"></div>
             </div>
-          </div>
-          <div class="col">
-            <a href="#">Fb</a>
-            <a href="#">Ig</a>
-          </div>
+        </div>
           <div class="col">lokasi Peta</div>
         </div>
       </div>

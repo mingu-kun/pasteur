@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\contact;
 use Illuminate\Http\Request;
 
 class LandingController extends Controller
@@ -12,7 +13,9 @@ class LandingController extends Controller
     }
     public function contact()
     {
-        return view('contact');
+        $contacts = contact::all();
+        
+        return view('contact',compact('contacts'));
     }
     public function product()
     {

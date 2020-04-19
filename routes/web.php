@@ -18,6 +18,7 @@ Route::get('/product', 'LandingController@product');
 Route::get('/contact', 'LandingController@contact');
 Route::get('/price', 'LandingController@price');
 Route::get('/registration', 'RegistationController@index')->name('registration');
+Route::post('/registration', 'RegistationController@store');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

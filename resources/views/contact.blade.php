@@ -29,24 +29,29 @@
 </style>
 
 <div class="container shadow-lg p-3 bg-white rounded mt-5 text-center mt-5 maincontainer" >
-    <div class="jumbotron jumbotron-fluid my-jumbotron">
+    <div class="jumbotron jumbotron-fluid bg-success my-jumbotron">
         <div class="container">
             <h1 class="display-4 title">KONTAK KAMI</h1>
-        </div>
-    </div>
-
-    <div class="container flexbox">
-        {{-- @foreach ($contacts as $cont)
-            <div class="card maincard" >
-                <div class="card-body">
-                <h5 class=" px-5" class="card-title">{{ $cont->tipe }}</h5>
-                <a href="{{ $cont->link }}" class="btn btn-primary">{{ $cont->data }}</a>
+            <div class="row">
+                <div class="col-12 text-center mt-5">
+                    <img src="{{asset('image/logo-gateway-3@2x.png')}}" height="300" width="370">
                 </div>
             </div>
-        @endforeach --}}
-        
+        </div>
     </div>
-
+    <br>
+    <br>
+    <div class="container flexbox">
+        @foreach ($contacts as $cont)
+            <div class="card maincard" >
+                <div class="card-body">
+                <h5 class=" px-5" class="card-title">{{ $cont->contact }}</h5>
+                <a href="#" class="btn btn-primary">{{ $cont->data }}</a>
+                </div>
+            </div>
+        @endforeach 
+    </div>
+    <br>
 </div>
 
 @endsection
